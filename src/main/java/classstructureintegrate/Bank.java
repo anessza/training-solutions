@@ -30,9 +30,7 @@ public class Bank {
         System.out.println(firstAccount.getOwner() + " deposit (Ft):");
         firstAccount.deposit(sc.nextInt());
         System.out.println(firstAccount.getOwner() + " transfer to " + secondAccount.getOwner() + " (Ft):");
-        int transfer = firstAccount.transfer(sc.nextInt());
-        firstAccount.withdraw(firstAccount.transfer(transfer));
-        secondAccount.deposit(secondAccount.transfer(transfer));
+        firstAccount.transfer(secondAccount, sc.nextInt());
 
         System.out.println(firstAccount.getInfo());
         System.out.println(secondAccount.getInfo());

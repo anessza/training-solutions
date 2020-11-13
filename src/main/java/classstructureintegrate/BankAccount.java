@@ -40,8 +40,10 @@ public class BankAccount {
     public void withdraw(int withdraw) {
         this.balance = balance - withdraw;
     }
-    public int transfer(int transfer) {
-        return transfer;
+    public int transfer(BankAccount to, int amount) {
+        to.deposit(amount);
+        this.withdraw(amount);
+        return balance;
     }
     public String getInfo() {
         return owner  + " (" + accountNumber + "): " + balance + " Ft";
