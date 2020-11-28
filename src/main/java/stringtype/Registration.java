@@ -20,7 +20,5 @@ public class Registration {
         System.out.println("Helyes a felhasználónév? " + felhasznalo.isValidName(username) );
         System.out.println("A jelszavak egyeznek? " + felhasznalo.isValidPassword(password1, password2) );
         System.out.println("Az email cím helyes? " + felhasznalo.isValidEmail(email) );
-
-
-    }
+     }
 }
