@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ChangeLetter {
 
     static String changeVowels(String string){
-        StringBuilder backString = new StringBuilder();
+        /*StringBuilder backString = new StringBuilder();*/
         String newString=string;
 
         String[] vowels = new String[]{"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
@@ -13,8 +13,8 @@ public class ChangeLetter {
               String c=item;
               newString = newString.replace(c, "*");
         }
-        backString = backString.append(newString);
-        return backString.toString();
+        /*backString = backString.append(newString);*/
+        return newString;
         }
 
     public static void main(String[] args) {
