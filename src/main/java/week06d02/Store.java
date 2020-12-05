@@ -7,7 +7,7 @@ public class Store {
     public static int getProductByCategoryName(List<Product> productList, String category){
         int pieceOfCategory=0;
         for (Product item: productList){
-            if (category == item.getCategory()) pieceOfCategory++;
+            if (category.equals(item.getCategory())) pieceOfCategory++;
         }
     return pieceOfCategory;
     }
