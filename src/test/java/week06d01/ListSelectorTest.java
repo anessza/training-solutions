@@ -20,12 +20,8 @@ public class ListSelectorTest {
         test.add("Tamás");
         test.add("Andrea");
 
-        List<String> testRight = new ArrayList<>();
-        testRight.add("Alma");
-        testRight.add("Nárcisz");
-        testRight.add("András");
-        testRight.add("Andrea");
-        List<String> solved = listSelector(test);
+        String testRight = "[Alma, Nárcisz, András, Andrea]";
+        String solved = listSelector(test);
         assertEquals   (testRight, solved );
     }
 }

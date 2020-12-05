@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListSelector {
-    static List<String> listSelector(List<String> stringList) throws IllegalArgumentException {
+    static String listSelector(List<String> stringList) throws IllegalArgumentException {
         List<String> newStringList = new ArrayList<>();
         for (String item: stringList){
             int i = stringList.indexOf(item);
@@ -12,7 +12,8 @@ public class ListSelector {
                 newStringList.add(item);
             }
         }
-        return newStringList;
+
+        return newStringList.toString();
     }
 
     public static void main(String[] args) {
@@ -24,9 +25,9 @@ public class ListSelector {
         test.add("András");
         test.add("Tamás");
         test.add("Andrea");
-        List<String> newList= listSelector(test);
-        for (String item: newList) {
-            System.out.println(item);
-        }
+
+        String newList= listSelector(test);
+        System.out.println(newList);
+
     }
 }
