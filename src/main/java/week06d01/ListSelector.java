@@ -12,8 +12,8 @@ public class ListSelector {
                 newStringList.add(item);
             }
         }
-
-        return newStringList.toString();
+        String newString = newStringList.toString();
+        return newString.replace(", ", "");
     }
 
     public static void main(String[] args) {

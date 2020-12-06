@@ -20,7 +20,7 @@ public class ListSelectorTest {
         test.add("Tamás");
         test.add("Andrea");
 
-        String testRight = "[Alma, Nárcisz, András, Andrea]";
+        String testRight = "[AlmaNárciszAndrásAndrea]";
         String solved = listSelector(test);
         assertEquals   (testRight, solved );
     }
