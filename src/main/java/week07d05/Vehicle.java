@@ -30,6 +30,7 @@ public class Vehicle {
     }
 
     public static void main(String[] args) {
+       Vehicle auto = new Car(3, TransmissionType.AUTOMATIC);
         Car mustang = new Car(4, TransmissionType.AUTOMATIC);
         Motorcycle bike = new Motorcycle(1, TransmissionType.SEQUENTIAL);
         Truck truck = new Truck(2, TransmissionType.MANUAL);
@@ -38,8 +39,11 @@ public class Vehicle {
         System.out.println("A mustang autó sebbességváltó típusa = " + mustang.getTransmissionType());
         System.out.println("A bike motorkerékpár sebessége = " + bike.getNumberOfGears());
         System.out.println("A bike motorkerékpár sebbességváltó típusa = " + bike.getTransmissionType());
+
         System.out.println("A truck teherautó sebessége = " + truck.getNumberOfGears());
         System.out.println("A truck teherautó sebbességváltó típusa = " + truck.getTransmissionType());
+        System.out.println("A auto autó sebessége = " + auto.getNumberOfGears());
+        System.out.println("A auto autó sebességváltó típusa = " + auto.getTransmissionType());
     }
 
 }
