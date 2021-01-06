@@ -14,7 +14,6 @@ metódusát is!
  */
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class Lab {
     private String title;
