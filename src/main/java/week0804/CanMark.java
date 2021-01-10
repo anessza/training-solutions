@@ -15,6 +15,6 @@ BadMood példányt kap! Majd hívd meg a giveMark() metódusát mindkettőnek,
  */
 
 public interface CanMark {
-    int giveMark()
+    int giveMark();
 
 }

@@ -1,11 +1,22 @@
 package week0804;
 
-public class Trainer {
-    int CanMark;
+import week07d05.TransmissionType;
 
-    public Trainer(int canMark) {
-        CanMark = canMark;
+public class Trainer {
+    private CanMark canMark;
+
+    public Trainer(CanMark canMark) {
+        this.canMark= canMark;
     }
 
-    int giveMark()
+    int giveMark(){
+        return canMark.giveMark();
+    }
+
+    public static void main(String[] args) {
+        Trainer trainer = new Trainer(new GoodMood());
+        Trainer trainer2 = new Trainer(new BadMood());
+        System.out.println(trainer.giveMark());
+        System.out.println(trainer2.giveMark());
+    }
 }
