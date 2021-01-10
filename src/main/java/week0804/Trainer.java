@@ -1,6 +1,5 @@
 package week0804;
 
-import week07d05.TransmissionType;
 
 public class Trainer {
     private CanMark canMark;
