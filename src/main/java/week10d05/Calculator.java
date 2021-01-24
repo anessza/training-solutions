@@ -1,4 +1,4 @@
-package week10d03;
+package week10d05;
 /*
 Készítsünk egy Calculator nevű osztályt, melynek van egy
 findMinSum(int[] arr) metódusa. A metódus feladata, hogy
