@@ -1,4 +1,4 @@
-package week0804;
+package week08d04;
 /*
 Hozz létre egy CanMark interfészt egy int giveMark() metódussal!
 Ez azt jelenti, hogy valaki tud osztályzatot adni. Ennek legyen

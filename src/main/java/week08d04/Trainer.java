@@ -1,4 +1,4 @@
-package week0804;
+package week08d04;
 
 
 public class Trainer {
