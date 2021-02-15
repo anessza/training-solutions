@@ -5,7 +5,6 @@ fájl tartalmazza a magyar városok listáját. Add vissza a leghosszabb nevű v
 https://github.com/Training360/strukturavalto-java-public/blob/master/examples/week13d01/src/main/resources/iranyitoszamok-varosok-2021.csv
  */
 
-import week12d05.Covid;
 
 import java.io.BufferedReader;
 import java.io.IOException;
