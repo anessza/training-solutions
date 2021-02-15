@@ -2,6 +2,7 @@ package exam03;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 public class Cruise extends Boat {
     private Boat boat;
@@ -9,16 +10,25 @@ public class Cruise extends Boat {
     private double basicPrice;
     private List<Passenger> passengers;
 
-    public Cruise(Boat boat, LocalDate sailing, double basicPrice, List<Passenger> passengers) {
+    public Cruise() {
+        super();
         this.boat = boat;
         this.sailing = sailing;
         this.basicPrice = basicPrice;
-        this.passengers = passengers;
     }
 
     public double getBasicPrice() {
         return basicPrice;
     }
+
+    public Boat getBoat() {
+        return boat;
+    }
+
+    public LocalDate getSailing() {
+        return sailing;
+    }
+
 
     public boolean bookPassenger(Passenger passenger) {
        if (passenger.getMaxPassengers() > passengers.size()) {
@@ -27,27 +37,36 @@ public class Cruise extends Boat {
        else return false;
     }
     public double getPriceForPassenger(Passenger passenger) {
+        double price =0;
         if (passenger.getCruiseClass() == CruiseClass.LUXURY) {
-            return (3 * passenger.getBasicPrice());
+            price = (3 * passenger.getBasicPrice());
         }
         if (passenger.getCruiseClass() == CruiseClass.FIRST) {
-            return (1.8 * passenger.getBasicPrice());
+            price =  (1.8 * passenger.getBasicPrice());
         }
         if (passenger.getCruiseClass() == CruiseClass.SECOND) {
-            return (1 * passenger.getBasicPrice());
+            price =  (1 * passenger.getBasicPrice());
         }
+        return price;
     }
-    findPassengerByName() {
+
+
+    public Passenger findPassengerByName(String name) {
+
+
+
+
+            }
+
+
+    public List<String> getPassengerNamesOrdered() {
+
+    }
+    public double sumAllBookingsCharged() {
 
 
     }
-    getPassengerNamesOrdered() {
-
-    }
-    sumAllBookingsCharged() {
-
-    }
-    countPassengerByClass() {
+    public Map<CruiseClass, Integer> countPassengerByClass() {
 
     }
 }

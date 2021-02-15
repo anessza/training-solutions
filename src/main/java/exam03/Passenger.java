@@ -6,6 +6,7 @@ public class Passenger extends Cruise {
     CruiseClass cruiseClass;
 
     public Passenger(String name, CruiseClass cruiseClass) {
+        super();
         this.name = name;
         this.cruiseClass = cruiseClass;
     }

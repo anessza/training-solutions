@@ -26,7 +26,7 @@ public class Boat {
     private String name;
     private int maxPassengers;
 
-    public Boat(String name, int maxPassengers) {
+    public Boat() {
         this.name = name;
         this.maxPassengers = maxPassengers;
     }

@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CruiseTest {
-    private Boat boat = new Boat("WetDreams", 5);
+    private Boat boat = new Boat();
 
     private Cruise cruise = new Cruise(boat, LocalDate.of(2021, 1, 1), 100_000);
 

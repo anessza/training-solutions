@@ -8,7 +8,7 @@ public class BoatTest {
 
     @Test
     void create() {
-        Boat boat = new Boat("WetDreams", 15);
+        Boat boat = new Boat();
         assertEquals("WetDreams", boat.getName());
         assertEquals(15, boat.getMaxPassengers());
     }
