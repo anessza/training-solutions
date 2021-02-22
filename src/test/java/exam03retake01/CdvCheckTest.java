@@ -12,12 +12,13 @@ class CdvCheckTest {
         assertFalse(new CdvCheck().check("8365670004"));
     }
 
-    @Test
+  @Test
     void notNumber() {
-        assertThrows(IllegalArgumentException.class,
-                () -> new CdvCheck().check("123456789"));
+      assertThrows(IllegalArgumentException.class, () -> new CdvCheck().check("123456789"));
 
         assertThrows(IllegalArgumentException.class,
                 () -> new CdvCheck().check("12345a7890"));
     }
 }
+
+

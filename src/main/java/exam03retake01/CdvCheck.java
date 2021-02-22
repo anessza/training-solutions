@@ -23,6 +23,9 @@ public class CdvCheck {
 
 
     public boolean check(String cdv) {
+        if (cdv.length() < 10) {
+            throw new IllegalArgumentException("This CDV lenght is too sort");
+        }
 
         int i = 0;
 
@@ -32,31 +35,42 @@ public class CdvCheck {
 
         for (char c : cdv.toCharArray()) {
             i++;
-            int number = Integer.parseInt(String.valueOf(c));
-            if (i < 10) {
-                check = check + number * i;
-            } else if (i == 10) {
-                ten = number;
+            try {
+                int number = Integer.parseInt(String.valueOf(c));
+                if (i < 10) {
+                    check = check + number * i;
+                } else if (i == 10) {
+                    ten = number;
+                }
+            } catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("This CDV contains letter(s)", e);
             }
         }
+            int solve = check % 11;
 
-        int solve = check % 11;
+                if (solve == ten) {
+                    return true;
 
-        if (solve == ten) {
-            return true;
-        } else return false;
+                }
+                else {
+                    return false;
+                }
     }
 
-    public boolean notNumber(String cdv){
+    /*public boolean notNumber(String cdv) {
         if (cdv.length() < 10) {
             throw new IllegalArgumentException("This CDV lenght is too sort");
         }
-        try {
-            int number = Integer.parseInt(cdv);
+        else {
+            try {
+                int number = Integer.parseInt(cdv);
+            }
+            catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("This CDV contains letter(s)", e);
+            }
+            return true;
         }
-        catch (NumberFormatException e) {
-            throw new IllegalArgumentException("This CDV contains letter(s)", e);
-        }
-        return true;
     }
+    */
+
 }
