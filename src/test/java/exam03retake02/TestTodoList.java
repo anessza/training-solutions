@@ -19,7 +19,7 @@ public class TestTodoList {
         todoList.addTodo(new Todo("Számlák", 3));
         todoList.addTodo(new Todo("Vizsga", 1));
 
-        todoList.getTodos().get(2).complete();
+       todoList.getTodos().get(2).complete();
         todoList.getTodos().get(4).complete();
     }
 
