@@ -12,21 +12,21 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class City {
-    public String longestLine(String path){
+    public String longestLine(String path) {
         Path url = Path.of(path);
         try (BufferedReader br = Files.newBufferedReader(url)) {
             String line;
             String longestLine = null;
             int lenght = 0;
 
-            while((line = br.readLine()) != null){
-                if (line.length() > lenght){
+            while ((line = br.readLine()) != null) {
+                if (line.length() > lenght) {
                     lenght = line.length();
                     longestLine = line;
                 }
-            } return longestLine;
-        }
-        catch (IOException e){
+            }
+            return longestLine;
+        } catch (IOException e) {
             throw new IllegalStateException("Can't read file", e);
         }
     }
@@ -35,5 +35,6 @@ public class City {
         City city = new City();
         System.out.println(city.longestLine("iranyitoszamok.csv"));
     }
-
 }
+
+
