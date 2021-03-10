@@ -32,34 +32,36 @@ public class TemplateMerger {
 
     public static String merge(Path file, List<Employee> employees){
 
+        String mergeSolved;
         try {
             BufferedReader reader = Files.newBufferedReader(file);
+                String line;
 
-            String line = reader.readLine();
-                int i = line.indexOf(":");
-                String firstAttribute = line.substring(0, i+1);
-            System.out.println(firstAttribute);
-                int j = line.indexOf(",");
-                int k = line.indexOf(":",j);
-                String secondAttribute = line.substring(j+2, k+1);
-            System.out.println(secondAttribute);
+                mergeSolved = null;
+                while ((line = reader.readLine()) != null) {
+                    int i = line.indexOf(":");
+                    String firstAttribute = line.substring(0, i + 1);
+                    int j = line.indexOf(",");
+                    int k = line.indexOf(":", j);
+                    String secondAttribute = line.substring(j + 2, k + 1);
 
-                StringBuilder solved =  new StringBuilder();
+                    StringBuilder solved = new StringBuilder();
 
-                for (Employee item : employees) {
-                    solved.append(firstAttribute);
-                    solved.append(" ");
-                    solved.append(item.getName());
-                    solved.append(", ");
-                    solved.append(secondAttribute);
-                    solved.append(item.getName());
-                    solved.append("\n");
+                    for (Employee item : employees) {
+                        solved.append(firstAttribute);
+                        solved.append(" ");
+                        solved.append(item.getName());
+                        solved.append(", ");
+                        solved.append(secondAttribute);
+                        solved.append(" ");
+                        solved.append(item.getBirthday());
+                        solved.append("\n");
+                    }
+
+                    mergeSolved = solved.toString();
                 }
 
-                String mergeSolved = solved.toString();
-            System.out.println(mergeSolved);
-
-                return mergeSolved;
+            return mergeSolved;
         }
         catch (IOException e) {
             throw new IllegalStateException("Can't read file", e);
@@ -74,7 +76,7 @@ public class TemplateMerger {
         employeesList("Kinga", 1982, employeeList);
         System.out.println(employeeList.toString());
 
-        Path file = Path.of("template.txt");
+        Path file = Path.of("\\training\\training-solutions\\template.txt");
 
         System.out.println(merge(file, employeeList));
 
