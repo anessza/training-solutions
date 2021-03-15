@@ -17,10 +17,10 @@ public class ContractCreator {
     }
 
     public static void main(String[] args) {
-        ContractCreator contractByTemplate = new ContractCreator("András", List.of(1000, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 1000, 1100, 1200));
-        Contract contract = contractByTemplate.create("Tamás");
+        ContractCreator contractTemplate = new ContractCreator("András", List.of(1000, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 1000, 1100, 1200));
+        Contract contract = contractTemplate.create("Tamás");
         contract.getMonthlyPrices().set(11, 1500);
         System.out.println(contract);
-        System.out.println(contractByTemplate.getTemplate().getMonthlyPrices());
+        System.out.println(contractTemplate.getTemplate().getMonthlyPrices());
     }
 }
