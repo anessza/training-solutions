@@ -1,4 +1,4 @@
-package exam03;
+/*package exam03;
 
 import org.junit.jupiter.api.Test;
 
@@ -91,3 +91,4 @@ public class CruiseTest {
 
 }
 
+*/

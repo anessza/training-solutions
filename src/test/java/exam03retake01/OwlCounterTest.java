@@ -1,4 +1,4 @@
-package exam03retake01;
+/*package exam03retake01;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,3 +21,6 @@ public class OwlCounterTest {
         assertEquals(135, owlCounter.getNumberOfOwls("Zala"));
     }
 }
+
+
+ */

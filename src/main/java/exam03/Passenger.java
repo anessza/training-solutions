@@ -1,4 +1,4 @@
-package exam03;
+/*package exam03;
 
 public class Passenger extends Cruise {
 
@@ -19,3 +19,5 @@ public class Passenger extends Cruise {
         return cruiseClass;
     }
 }
+
+ */

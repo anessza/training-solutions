@@ -1,4 +1,4 @@
-package week06d01;
+/*package week06d01;
 
 import org.junit.jupiter.api.Test;
 
@@ -25,3 +25,6 @@ public class ListSelectorTest {
         assertEquals   (testRight, solved );
     }
 }
+
+
+ */
